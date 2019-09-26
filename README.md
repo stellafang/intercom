@@ -11,6 +11,7 @@ Install dependencies using npm:
 npm i
 ```
 
+We recommend using: node v8.10.0 and npm v5.7.1
 
 ## Testing
 
