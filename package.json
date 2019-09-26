@@ -1,0 +1,12 @@
+{
+    "name": "intercom-coding-challenge",
+    "description": "intercom coding challenge",
+    "scripts": {
+        "start": "node main.js",
+        "test": "jest"
+    },
+    "dependencies": {
+        "fs": "0.0.1-security",
+        "jest": "^24.9.0"
+    }
+}
