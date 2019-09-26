@@ -1,9 +1,11 @@
 # Intercom Coding Challenge
 
+This app will filter through the customers in the `customer.txt` to find the ones that live within 100 km of Intercom's office in Dublin, then order this resulting list by each customer's user id (ascending). The expected output can be found in `output.txt`
+
 
 ## Setup
 
-Install dependecies through using npm:
+Install dependencies using npm:
 
 ```bash
 npm i
@@ -26,4 +28,7 @@ Run app with:
 ```bash
   npm start
 ```
+
+Observe the output in your cli.
+
 

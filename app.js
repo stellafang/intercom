@@ -1,5 +1,5 @@
-import {isWithin100Km, quickSort} from './utils'
 import fs from 'fs'
+import {isWithin100Km, quickSort} from './utils'
 
 const latitude = 53.339428
 const longitude = -6.257664
@@ -13,6 +13,7 @@ const app = () => {
         }
         return filtered
     }, [])
+
     console.log(quickSort(filteredData, 0, filteredData.length - 1, "user_id"))
 }
 

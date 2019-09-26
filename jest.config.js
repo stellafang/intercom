@@ -3,7 +3,6 @@ module.exports = {
     collectCoverage: true,
     testPathIgnorePatterns: ['node_modules'],
     collectCoverageFrom: [
-        'app.{js}',
         'utils.{js}',
     ],
     coverageThreshold: {

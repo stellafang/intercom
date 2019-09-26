@@ -1,7 +1,19 @@
+/**
+ * Converts degrees to radians.
+ * @param {Number} degrees 
+ */
 export const toRadians = (degrees) => {
     return degrees * (Math.PI / 180);
 }
 
+/**
+ * Returns true if the given 2 latlon pairs are within 100km from each other
+ * This is calculated using the Great-circle distance formula (@link https://en.wikipedia.org/wiki/Great-circle_distance)
+ * @param {Number} lat1 
+ * @param {Number} lon1 
+ * @param {Number} lat2 
+ * @param {Number} lon2 
+ */
 export const isWithin100Km = (lat1, lon1, lat2, lon2) => {
     if (lat1 < -90 || lat2 < -90 || lat1 > 90 || lat2 > 90) throw new Error('Invalid latitude')
     if (lon1 < -180 || lon2 < -180 || lon1 > 180 || lon2 > 180) throw new Error('Invalid longitude')
@@ -18,6 +30,13 @@ export const isWithin100Km = (lat1, lon1, lat2, lon2) => {
     return distance <= 100
 }
 
+/**
+ * Quicksorts an array of objects based on the value at a given key.
+ * @param {*} arr array of objects
+ * @param {*} left left index
+ * @param {*} right right index
+ * @param {*} valueName the name of the key to sort on
+ */
 export const quickSort = (arr, left, right, valueName) => {
     let pivot
     let partitionIndex
@@ -34,6 +53,10 @@ export const quickSort = (arr, left, right, valueName) => {
     return arr;
 }
 
+/**
+ * partition helper for quicksort
+ * @private
+ */
 const _partition = (arr, pivot, left, right, valueName) => {
     let pivotValue = arr[pivot][valueName]
     let partitionIndex = left;
@@ -48,6 +71,10 @@ const _partition = (arr, pivot, left, right, valueName) => {
     return partitionIndex;
 }
 
+/**
+ * swap helper for quicksort
+ * @private
+ */
 const _swap = (arr, i, j) => {
     var temp = arr[i];
     arr[i] = arr[j];
